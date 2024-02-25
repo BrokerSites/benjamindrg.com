@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <script src="js/contactform.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="index.html" class="cs-logo" aria-label="back to home">
+            <img src="images/logo.webp" alt="logo" width="210" height="50" aria-hidden="true" decoding="async" style="
+            height: 64px;
+        ">
+        </a>
+        <!--Navigation List-->
+        <div class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="index.html" class="cs-li-link ">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="contact.html" class="cs-li-link cs-active">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="about.html" class="cs-li-link ">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="cs-li">
+                        <div class="book-now-wrapper">
+                            <a href="contact.html" class="cs-li-link book-now" >
+                                Book Now
+                              </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a href="contact.html" class="cs-button-solid cs-nav-button" style="color: #f2f2f2 !important;">Book Now</a>
+    </div>
+</header>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1105">   
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Send a Message</h2>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-1105" name="Contact Form" method="post" onsubmit="submitToAPI(event)">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1105" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" id="email-1105" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="phone" id="phone-1105" name="phone" placeholder="Phone">
+                </label>
+
+                <div class="beds-pets">
+                    <label class="cs-label cs-bedrooms">
+                        Bedrooms
+                        <input class="cs-input" required type="bedrooms" id="bedrooms-1105" name="bedrooms" placeholder="Bedrooms">
+                    </label>
+                    <label class="cs-label cs-pets">
+                        Pets
+                        <input class="cs-input" required type="pets" id="pets-1105" name="pets" placeholder="# Pets">
+                    </label>
+                </div>
+                <label class="cs-label cs-phone">
+                    Preferred Locations
+                    <input class="cs-input" required type="locations" id="locations-1105" name="locations" placeholder="Locations">
+                </label>
+                <label class="cs-label">
+                    Preferred Meeting Times
+                    <textarea class="cs-input cs-textarea" required name="Times" id="times-1105" placeholder="Write message..."></textarea>
+                </label>
+                <label class="cs-label">
+                    Tell us about your dream home!
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1105" placeholder="Write message..."></textarea>
+                </label>
+
+                <div class="g-recaptcha" data-sitekey="6LetUvsmAAAAAKgAO9qPe_gPcnMZd3_xTsVw3z57" class="form-control" style="width:100%;" data-callback="ccb" data-expired-callback="onExpired"></div>
+                <input type="hidden" id="recaptcha-response" name="recaptcha-response" />
+                <script>
+                    function ccb(response) {
+                      $(':input[type="submit"]').prop('disabled', false);
+                      $('#recaptcha-response').val(response);
+                    }
+                
+                    function onExpired() {
+                      $('button[type="submit"]').prop('disabled', true);
+                      $('#recaptcha-response').val('');
+                    }
+                  </script>
+               <button type="submit" disabled class="cs-submit">Submit</button>
+            </form>
+        </div>
+        <ul class="cs-ul">
+            <li class="cs-li">
+                <picture class="cs-icon-wrapper">
+                    <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                </picture>
+                <div class="cs-flex-group">
+                    <span class="cs-header">Phone</span>
+                    <a href="tel:888-4565-789
+                    " class="cs-link">+1 (857) 438-8739
+                    </a>
+                    <button class="call-button" onclick="window.location.href='tel:+18574388739'">Call Us</button>
+                </div>
+            </li>
+            <li class="cs-li">
+                <picture class="cs-icon-wrapper">
+                    <img aria-hidden="true" src="images/Clock.svg" alt="Clock icon" class="cs-icon" width="40" height="40" decoding="async">
+                </picture>
+                <div class="cs-flex-group">
+                    <span class="cs-header">Hours</span>
+                    <p class="contact-paragraph"> Monday - Friday: 9am - 5pm <br>
+
+                        Saturday: By appointment <br>
+                        
+                        Sunday: By appointment</p]>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+                    
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-877">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Forms</span>
+            <h2 class="cs-title">Application Forms</h2>
+        </div>
+        <ul class="cs-rented-group">
+            <li class="cs-item">
+                 
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/rentalapp.webp">
+                        <source media="(min-width: 601px)" srcset="images/rentalapp.webp">
+                        <img loading="lazy" decoding="async" src="images/rentalapp.webp" alt="therapy" width="305" height="200">
+                    </picture>
+                    <h3 class="cs-h3">Rental Application</h3>
+                    <a class="cs-button-solid" href="forms/massachusetts-rental-application.pdf" download>Download</a>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Footer                      -->
+<!-- ============================================ -->
+
+<section id="footer-1154">
+    <div class="cs-container">
+        <div class="cs-top">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <img class="cs-logo-img" loading="lazy" decoding="async" src="images/logo-dark.webp" alt="logo" width="168" height="48">
+            </a>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <a href="index.html" class="cs-link">Home</a>
+                </li>
+                <li class="cs-li">
+                    <a href="contact.html" class="cs-link">Contact</a>
+                </li>
+                <li class="cs-li">
+                    <a href="about.html" class="cs-link">About</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="cs-bottom">
+            <!--Social-->
+            <ul class="cs-social">
+                <li class="cs-social-li">
+                    <a href="https://www.facebook.com/kevin.benjamin.758" class="cs-social-link" aria-label="facebook" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-1a.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+                <li class="cs-social-li">
+                    <a href="https://www.linkedin.com/in/kevin-benjamin-a39335221/" class="cs-social-link" aria-label="linkedin" target="_blank" rel="noopener">
+                        <img class="cs-social-icon cs-default" src="images/linkedin.svg" alt="icon" loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                    </a>
+                </li>
+            </ul>
+            <span class="cs-copyright">
+                © Copyright <span id="year"></span> - <a href="" class="cs-copyright-link">Benjamin Douglas Realty Group</a>
+            </span>
+            <script>
+                document.getElementById('year').innerHTML = new Date().getFullYear();
+            </script>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Function to load the reCAPTCHA script
+    function loadRecaptcha() {
+        var script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js';
+        document.body.appendChild(script);
+    }
+
+    // Configure the IntersectionObserver
+    var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            // If the form is in view, load the reCAPTCHA script and stop observing the form
+            if(entry.isIntersecting) {
+                loadRecaptcha();
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    // Start observing the form
+    observer.observe(document.querySelector('#cs-form-1105'));
+</script>               
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
