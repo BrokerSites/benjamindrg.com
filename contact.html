@@ -6,7 +6,7 @@
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <script src="js/contactform.js"> </script>
+    <script src="https://brokersites.s3.us-east-2.amazonaws.com/js/contactform.js"> </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -76,7 +76,7 @@
             <span class="cs-topper">Contact Us</span>
             <h2 class="cs-title">Send a Message</h2>
             <!--Form-->
-            <form class="cs-form" id="cs-form-1105" name="Contact Form" method="post" onsubmit="submitToAPI(event)">
+            <form class="cs-form" id="cs-form" name="Contact Form" method="post" onsubmit="submitToAPI(event)">
                 <label class="cs-label">
                     Name
                     <input class="cs-input" required type="text" id="name-1105" name="name" placeholder="Name">
@@ -113,19 +113,10 @@
                     <textarea class="cs-input cs-textarea" required name="Message" id="message-1105" placeholder="Write message..."></textarea>
                 </label>
 
-                <div class="g-recaptcha" data-sitekey="6LetUvsmAAAAAKgAO9qPe_gPcnMZd3_xTsVw3z57" class="form-control" style="width:100%;" data-callback="ccb" data-expired-callback="onExpired"></div>
+                <div class="g-recaptcha" data-sitekey="6LdVznApAAAAAMyv788c6zf7RG5qaOclPo6xqGgZ" class="form-control" style="width:100%;" data-callback="ccb" data-expired-callback="onExpired"></div>
                 <input type="hidden" id="recaptcha-response" name="recaptcha-response" />
-                <script>
-                    function ccb(response) {
-                      $(':input[type="submit"]').prop('disabled', false);
-                      $('#recaptcha-response').val(response);
-                    }
-                
-                    function onExpired() {
-                      $('button[type="submit"]').prop('disabled', true);
-                      $('#recaptcha-response').val('');
-                    }
-                  </script>
+                <input type="hidden" id="destination" name="destination" value="kevinbbenjamin76@gmail.com">
+                <script src="https://brokersites.s3.us-east-2.amazonaws.com/js/callback.js"> </script>
                <button type="submit" disabled class="cs-submit">Submit</button>
             </form>
         </div>
@@ -234,29 +225,7 @@
     </div>
 </section>
 
-<script>
-    // Function to load the reCAPTCHA script
-    function loadRecaptcha() {
-        var script = document.createElement('script');
-        script.src = 'https://www.google.com/recaptcha/api.js';
-        document.body.appendChild(script);
-    }
-
-    // Configure the IntersectionObserver
-    var observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            // If the form is in view, load the reCAPTCHA script and stop observing the form
-            if(entry.isIntersecting) {
-                loadRecaptcha();
-                observer.unobserve(entry.target);
-            }
-        });
-    });
-
-    // Start observing the form
-    observer.observe(document.querySelector('#cs-form-1105'));
-</script>               
-
+<script src="https://brokersites.s3.us-east-2.amazonaws.com/js/loader.js"></script>               
 <script src="js/scripts.js"></script>
 </body>
 </html>
