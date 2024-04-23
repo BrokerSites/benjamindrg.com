@@ -993,7 +993,7 @@ body{
     font-weight: 700;
     text-align: center;
     margin: 0;
-    color: black;
+    color: white;
     min-width: 9.375rem;
     padding: 0 1.5rem;
     background-color: var(--primary);
@@ -1062,7 +1062,7 @@ body{
     width: 100%;
     max-width: 28.875rem;
     border-radius: 1rem;
-    background-color: #fff;
+
     overflow: hidden;
     grid-column: span 3;
     position: relative;
@@ -1070,17 +1070,11 @@ body{
     transition: box-shadow 0.3s, transform 0.3s;
     padding-bottom: 15px;
   }
-  #services-877 .cs-item:hover {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transform: translateY(-0.4375rem);
-  }
+
   #services-877 .cs-item:hover .cs-picture img {
-    opacity: .3;
     transform: scale(1.1);
   }
-  #services-877 .cs-item:hover .cs-h3 {
-    color: var(--primaryLight);
-  }
+
   #services-877 .cs-item:before {
     /* border, done in pseudo so it can sit under the picture */
     content: '';
@@ -1107,7 +1101,7 @@ body{
     width: 100%;
     height: 20.5rem;
     margin-bottom: 1.25rem;
-    background-color: var(--primaryLight);
+
     /* clips the img tag corners */
     overflow: hidden;
     display: block;
@@ -1121,7 +1115,7 @@ body{
       width: 100%;
       height: 10.5rem;
       margin-bottom: 1.25rem;
-      background-color: var(--primaryLight);
+
       /* clips the img tag corners */
       overflow: hidden;
       display: block;
