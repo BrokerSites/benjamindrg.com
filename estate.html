@@ -46,7 +46,7 @@
                     </li>
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <li class="cs-li cs-dropdown" tabindex="0">
-                        <span class="cs-li-link">
+                        <span class="cs-li-link cs-active">
                             Services
                             <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chev-down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         </span>
@@ -72,7 +72,7 @@
                         </ul>
                     </li>
                     <li class="cs-li">
-                        <a href="contact.html" class="cs-li-link cs-active">
+                        <a href="contact.html" class="cs-li-link">
                             Contact
                         </a>
                     </li>
@@ -90,97 +90,25 @@
 </header>
 
 <!-- ============================================ -->
-<!--                   Contact                    -->
+<!--                 Side By Side                 -->
 <!-- ============================================ -->
 
-<section id="contact-1105">   
+<section id="sbs-1431">
     <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Contact Us</span>
-            <h2 class="cs-title">Send a Message</h2>
-            <!--Form-->
-            <form class="cs-form" id="cs-form" name="Contact Form" method="post" onsubmit="submitToAPI(event)">
-                <label class="cs-label">
-                    Name
-                    <input class="cs-input" required type="text" id="name-1105" name="name" placeholder="Name">
-                </label>
-                <label class="cs-label cs-email">
-                    Email
-                    <input class="cs-input" required type="email" id="email-1105" name="email" placeholder="Email">
-                </label>
-                <label class="cs-label cs-phone">
-                    Phone
-                    <input class="cs-input" required type="phone" id="phone-1105" name="phone" placeholder="Phone">
-                </label>
-                <label class="cs-label">
-                    Services Needed
-                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1105" placeholder="Write message..."></textarea>
-                </label>
-
-                <div class="g-recaptcha" data-sitekey="6LdVznApAAAAAMyv788c6zf7RG5qaOclPo6xqGgZ" class="form-control" style="width:100%;" data-callback="ccb" data-expired-callback="onExpired"></div>
-                <input type="hidden" id="recaptcha-response" name="recaptcha-response" />
-                <input type="hidden" id="destination" name="destination" value="kevinbbenjamin76@gmail.com">
-                <script src="https://brokersites.s3.us-east-2.amazonaws.com/js/callback.js"> </script>
-               <button type="submit" disabled class="cs-submit">Submit</button>
-            </form>
+        <div class="cs-image-group">
+            <!-- Person Picture -->
+            <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
+            <picture class="cs-person">
+                <source media="(max-width: 600px)" srcset="images/estate.webp">
+                <source media="(min-width: 601px)" srcset="images/estate.webp">
+                <img loading="lazy" decoding="async" src="images/estate.webp" alt="volunteer" width="702" height="617" aria-hidden="true">
+            </picture>
         </div>
-        <ul class="cs-ul">
-            <li class="cs-li">
-                <picture class="cs-icon-wrapper">
-                    <img aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-phone.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
-                </picture>
-                <div class="cs-flex-group">
-                    <span class="cs-header">Phone</span>
-                    <a href="tel:+16179555923
-                    " class="cs-link">+1 (617) 955-5923
-                    </a>
-                    <button class="call-button" onclick="window.location.href='tel:+16179555923'">Call Us</button>
-                </div>
-            </li>
-            <li class="cs-li">
-                <picture class="cs-icon-wrapper">
-                    <img aria-hidden="true" src="images/Clock.svg" alt="Clock icon" class="cs-icon" width="40" height="40" decoding="async">
-                </picture>
-                <div class="cs-flex-group">
-                    <span class="cs-header">Hours</span>
-                    <p class="contact-paragraph"> Monday - Friday: 9am - 5pm <br>
-
-                        Saturday: By appointment <br>
-                        
-                        Sunday: By appointment</p]>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-
-                    
-
-<!-- ============================================ -->
-<!--                   Services                   -->
-<!-- ============================================ -->
-
-<section id="services-877">
-    <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Forms</span>
-            <h2 class="cs-title">Application Forms</h2>
-        </div>
-        <ul class="cs-rented-group">
-            <li class="cs-item">
-                 
-                    <picture class="cs-picture" aria-hidden="true">
-                        <source media="(max-width: 600px)" srcset="images/rentalapp.webp">
-                        <source media="(min-width: 601px)" srcset="images/rentalapp.webp">
-                        <img loading="lazy" decoding="async" src="images/rentalapp.webp" alt="therapy" width="305" height="200">
-                    </picture>
-                    <h3 class="cs-h3">Rental Application</h3>
-                    <a class="cs-button-solid" href="forms/massachusetts-rental-application.pdf" download>Download</a>
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
+            <span class="cs-topper">Services</span>
+            <h2 class="cs-title">Estate Planning</h2>
+            <p class="cs-text">
+                Ensure your assets are protected with our estate planning services. Plan for the future and secure your family's financial well-being.</section>
 
 <!-- ============================================ -->
 <!--                  Footer                      -->
