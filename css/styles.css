@@ -3379,3 +3379,28 @@ color: lightgray !important;
 }
 
                               
+
+
+.gallery {
+  display: flex;
+  flex-direction: column; /* Stack images in a column on mobile and tablet */
+  width: 90%; /* Adjusts width to the viewport */
+  max-width: 600px; /* Limits max width for large screens */
+  gap: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 901px) { /* Desktop and larger devices */
+  .gallery {
+      flex-direction: row; /* Place images in a row */
+      max-width: 1200px; /* Adjust maximum width */
+  }
+
+  .photo {
+      flex: 1; /* Each photo takes half the width of the gallery */
+  }
+}
